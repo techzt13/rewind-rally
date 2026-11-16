@@ -17,6 +17,14 @@ Turn a photo album the user explicitly selects into a fun, fair, ready-to-host g
 
 # Workflow
 
+Capabilities and expert agents used (only actions listed in the UGOS capability catalog):
+
+| Step | Expert agent | Capability | Action type |
+| --- | --- | --- | --- |
+| 2 | photo-agent | Albums (`ug-photo`): list album photos, read photo details | Read-only |
+| 7 | photo-agent | Albums (`ug-photo`): create album, add photos | Changes state; ask first |
+| 8 | knowledge-agent | Knowledge: save text note | Changes state; ask first |
+
 1. **Confirm scope.** Restate the album, player group, rounds, and mode in one line. Ask only if the album is unclear.
 2. **Gather photos (photo-agent).** Ask the photo expert to list photos in the selected album and return, for each candidate, only what the NAS provides: capture date, place or location label, scene or object labels, and any face or person groups that the user has already named. Do not request photos outside this album.
 3. **Pick fair candidates.** Apply the [clue rules](references/clue-rules.md). Remove photos that match user exclusions, look like screenshots or documents, have too little information for three honest hints, or are near-duplicates of a photo already chosen. Spread rounds across different dates and places when possible.
