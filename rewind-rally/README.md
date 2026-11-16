@@ -1,18 +1,34 @@
 # Rewind Rally
 
-Rewind Rally turns a photo album into a group guessing game. A host chooses an album, audience, and round count. The Skill creates progressive clues, then provides a separate answer key linked to the source photos.
+Turn any photo album on your UGREEN AI NAS into a party game.
 
-## Try it
+Pick an album ("Japan 2023", "Grandpa's 80th", "Class of 2026"), and Rewind Rally creates a ready-to-host guessing game: each round gives three hints (When, Where, What), players score more for guessing early, and the host reveals the real photo. Afterwards it can collect the game's photos into a new recap album, only if you say yes.
 
-On a UGREEN AI NAS environment with the supported Skill capabilities available, select an album and ask:
+## Who it is for
 
-> Make a five-round, family-friendly Rewind Rally game from this album.
+Anyone with shared photos: families on game night, friends after a trip, classmates at a reunion, teams at a party, teachers wrapping up a school year.
 
-The Skill uses only information returned for that selected album. It skips photos that do not support fair clues and does not change the originals.
+## Try saying
 
-## Package
+- "Rewind Rally our Japan 2023 album, 5 rounds, family."
+- "Make a time-machine photo quiz from the Family album for the kids."
+- "Where-in-the-world game from Backpacking, 8 rounds, adults."
 
-- `SKILL.md` — Skill instructions and behavior.
-- `README.md` — overview and example prompt.
+## What it will and won't do
 
-This package is an initial proposal-stage Skill and has not been tested on a UGREEN AI NAS.
+- Uses only the album you choose.
+- Every hint comes from the photo's real date, place, or scene labels; it never invents names or stories.
+- Skips screenshots, documents, and anything you exclude.
+- Never edits, moves, or removes your photos.
+- Asks before creating a recap album or saving a host card.
+- Keeps everything on your NAS.
+
+## Files
+
+- `SKILL.md` - Skill entry point and workflow.
+- `references/game-modes.md` - modes, scoring, and host script.
+- `references/clue-rules.md` - fairness and privacy rules for hints.
+
+## Disclosure
+
+This is an original Round 1 Skill package built with AI assistance (GitHub Copilot). It is not an official UGREEN Skill and has not yet been tested on a UGREEN AI NAS.
